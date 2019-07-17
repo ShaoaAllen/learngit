@@ -1,0 +1,43 @@
+{% from "_formhelpers.html" import render_field %}
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Flasky - Register{% endblock %}
+{% block page_content %}
+<div class="page-header">
+<h1>Register</h1>
+</div>
+<div class="col-md-4">
+<form method=post>
+  <dl>
+    {{ render_field(form.username) }}
+  </dl>
+  <dl>
+    {{ render_field(form.email) }}
+  </dl>
+  <dl>
+    {{ render_field(form.password) }}
+  </dl>
+  <dl>
+    {{ render_field(form.confirm) }}
+  </dl>
+  <dl>
+    {{ render_field(form.accept_tos) }}
+  </dl>
+  <p><input type=submit value=Register>
+</form>
+</div>
+{% endblock %}
+
+
+
+<!--<form method=post>-->
+<!--  <dl>-->
+<!--    {{ render_field(form.username) }}-->
+<!--    {{ render_field(form.email) }}-->
+<!--    {{ render_field(form.password) }}-->
+<!--    {{ render_field(form.confirm) }}-->
+<!--    {{ render_field(form.accept_tos) }}-->
+<!--  </dl>-->
+<!--  <p><input type=submit value=Register>-->
+<!--</form>-->
+
